@@ -1,3 +1,13 @@
-
-
-
+<body>
+<h1>Super Heroes Team!</h1>
+  <p>Team Name: <%= @team["name"] %></p>
+  <p>Team Motto: <%= @team["motto"] %></p>
+<h2>Team Members</h2>
+    <%@members.each do |member|%>
+        <div class="hero">
+        <p>Hero Name: <%= member[:name] %></p><br>
+        <p>Hero Power: <%= member[:power] %></p><br>
+        <p>Hero Biography: <%= member[:bio] %></p><br>
+        </div><br>
+    <%end%>
+</body>
